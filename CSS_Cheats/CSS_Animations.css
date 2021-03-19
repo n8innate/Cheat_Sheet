@@ -1,0 +1,47 @@
+/* 
+>>> Animations <<<
+
+
+" animation-name " 
+    - Sets the name of the animation used later by '@keyframes'
+    - Animation properties control how the animation should behave
+>> #anim {animation-name: colorful;}
+
+
+" animation-duration " 
+    - Sets the duration of the animation
+    - Animation properties control how the animation should behave
+>> #anim {animation-duration: 3s;}
+
+
+" @keyframes " 
+    - Controls what happens during that animation, or what rules to follow.
+    - Ranges from 0%[opening animation] - 100%[closing]
+>> @keyframes colorful { 0% {background-color: blue;} 100% {background-color: yellow;}}
+
+
+" hover " 
+    - Changes animation based on hovering
+>> div:hover {'name' & 'duration'} // @keyframes div { 100%{background-color: blue;} }
+
+
+" animation-fill-mode: forwards; " 
+    - Placed in ':hover' so element will stay highlighted
+>> div:hover {animation-fill-mode: forwards;}
+
+
+" Top, Bottom, Left, Right " 
+    - Moves the animation from the percentiles
+>> div:hover {'name' & 'duration'} // @keyframes div { 100%{top: 50px;} }
+
+
+" animation-iteration-count " 
+    - Control how many times an animation should be run
+>> #anim {animation-iteration-count: infinite;}
+
+
+" animation-timing-function " 
+    - Control how an animation transitions
+>> #anim {animation-timing-function: ease-out/ease/ease-in/linear;}
+
+*/

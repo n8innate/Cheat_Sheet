@@ -1,0 +1,150 @@
+
+Main difference between CSS and Sass is the usage of variables. They are declared and set to store data, similar to JavaScript.
+    - Variables are saved with '$' instead of Const and Let
+
+
+Saving variables
+    >>  $main-fonts: Arial, sans-serif;
+        $headings-color: green;
+    //To use variables:
+        h1 {
+            font-family: $main-fonts;
+            color: $headings-color;
+            }
+
+
+To Start: 
+    - Add within the style block
+        >> <style type='text/scss'>
+                $text-color: red;
+            </style>
+ 
+
+Add a partial file to your main.scss file
+    - This allows one to make files much less cluttered by creating a separate 'partial' file
+    1. Name the partial file
+        - Starts with underscore( _ ) and ends with ( .scss )
+        >> " _mixins.scss "
+    2. Add the file
+        - Simply 'import' the file
+        >> @import 'mixins'
+
+
+Nesting CSS with Sass 
+    - If there are a number of elements within a specific div/element, you can nest with Sass
+        Original:
+            nav {
+                background-color: red;
+            }
+            nav ul {
+                list-style: none;
+            }
+            nav ul li {
+                display: inline-block;
+            }   
+        Updated: 
+            nav {
+                background-color: red;
+                ul {
+                    list-style: none;
+                    li {
+                        display: inline-block;
+                    }
+                }
+            }
+
+
+Create Reusable CSS with Mixins
+    - Since not all web-browsers are compatible, you can include a Mixin with whatever quality you're looking to Add
+    1. First you add a mixin with that will be parsed through to check against different web-versions
+        >> @mixin border-radius($radius){
+            -webkit-border-radius:$radius; 
+            -moz-border-radius:$radius; 
+            -ms-border-radius:$radius;
+            border-radius:$radius;
+            }
+    2. Next you add '@include' and type the property as normal 
+        >> #awesome {
+            @include border-radius(15px); 
+            }
+
+
+Using @If/ @Else to Add Logic
+    - Just like in JavaScript, we can use If/Else to check for conditions; mixing this with Mixins
+        >> @mixin border-stroke($val){
+                @if ($val == light){
+                    border: 1px solid black;
+                }
+                @else if ($val == medium){
+                    border: 3px solid black;
+                }
+                @else if ($val == heavy){
+                    border: 6px solid black;
+                }
+                @else {
+                    border: none;
+                }
+            }
+            #box {
+                width: 150px;
+                height: 150px;
+                background-color: red;
+                @include border-stroke(heavy);
+            }
+
+
+Use @for to Create a Sass Loop
+    - Will loop (similar to JavaScript) either 'through'/ or 'to' some end
+        1. 'to' excludes the last number
+        2. 'through' is inclusive
+    - In order to select text, use #{} (similar to ${} in JavaScript)
+
+        >> @for $i from 1 through 12 {
+            .col-#{$i} { width: 100%/12 * $i; }
+            }
+
+            .col-1 {
+                width: 8.33333%;
+            }
+            .col-2 {
+                width: 16.66667%;
+            }
+            . . .
+            .col-12 {
+                width: 100%;
+            }
+
+
+Use @each to Map Over Items in a List
+    >> @each $color in blue, black, red {
+            .#{$color}-bg {background-color: $color;}
+        }
+        div {
+            height: 200px;
+            width: 200px;
+        }
+        </style>
+        <div class="blue-bg"></div>
+        <div class="black-bg"></div>
+        <div class="red-bg"></div>
+
+
+Apply a Style Until a Condition is Met with @while
+    >> $x: 1;
+        @while $x < 13 {
+            .col-#{$x} { width: 100%/12 * $x;}
+            $x: $x + 1;
+        }
+
+
+@Extend One Set of CSS Styles to Another Element
+    - Makes it easy to borrow the CSS rules from one element and build upon them in another
+    >>   .info{
+            width: 200px;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+        .info-important {
+            @extend .info;
+            background-color: magenta;
+        }

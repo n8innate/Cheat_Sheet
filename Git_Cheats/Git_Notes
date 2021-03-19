@@ -1,0 +1,59 @@
+-   Git tracks and saves your progress through a project so that you    
+    might update and edit projects
+
+
+- Git Basic Commands:
+
+    1. $ git init 
+        - Initialize local git repository
+
+    2. $ git add <file>
+        - Add File(s) to Index
+
+    3. $ git status 
+        - Check Status of Working Tree
+
+    4. $ git commit
+        - Commit Changes in Index
+
+    5. $ git push 
+        - Push to Remote repository
+
+    6. $ git pull 
+        - Pull latest from remote repository
+
+    7. $ git clone
+        - Pulls and clones into a new directory
+
+    8. $ git rm -- cached <file>
+        - Removes a file from staging area/ repository
+
+    9. $ git add .
+        - Adds all files into staging area
+
+    10. $ git touch <index.html>
+        - Adds a file with the file name after
+    
+
+
+- Commiting Files and Changes:
+
+    1. $ git commit
+        - This will open a 'vim editor'
+
+    2. Press i 
+        - Allowing you to type
+
+    3. Uncomment 'Initial Commit'
+        - Allows for first interior comment 
+
+    4. 'Esc'
+        - Takes you out of insert mode
+
+    5. ':wq'
+        - Finalizes commit
+
+    B. Faster Method:
+        1. $ git commit -m 'Changed "___"'
+            - Changes the master (-m)
+            - Adds a comment in the parenthesis at the end

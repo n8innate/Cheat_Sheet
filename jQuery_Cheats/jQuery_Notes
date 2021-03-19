@@ -1,0 +1,84 @@
+
+Considered (by FreeCodeCamp) to be the most popular JavaScript tool "of all time."
+
+
+
+Adding jQuery
+    1. Same as adding JavaScript, place within a "script" block 
+        >> <script></script>
+    2. Next, within the script block, add the jQuery format
+        >> $(document).ready(function() {  });
+        - Without this "document ready" signification, the script may try to run before the HTML
+
+
+
+Adding functionality: .addClass*()
+    1. The 'Bling' sign ($) proceeds every jQuery operation
+        - This goes inside the document-ready block
+    2. '.addClass' function allows you to add functionality to a page element
+
+    - Making an element 'bounce'
+        >> $("button").addClass("animated bounce");
+    - Shake
+        >> $("button").addClass("animated shake");
+    - FadeOut
+        >> $("#target6").addClass("animated fadeOut");
+    - Hinge
+        >> $("body").addClass("animated hinge");
+
+    3. Any class or id can be selected using their css designations
+        >> .menu-item // #bottom-button
+    4. Also able to add Bootstrap qualities to your jQuery
+        >> $("#target1").addClass("btn-primary");
+
+
+
+Removing functionality: .removeClass // .remove()
+    - You can remove functionality with 'removeClass' instead
+        >> $("#target2").removeClass("btn-default");
+    2. Remove something altogether with '.remove()'
+        >> $("#target4").remove();
+
+
+
+Changing the CSS: .css()
+    1. Change the CSS on an element with '.css()'
+        >> $("#target1").css("color", "blue");
+        -- This changes the target1 id to a color of blue
+
+
+
+Property Change: .prop()
+    - Change the property with '.prop()'
+        >> $("button").prop("disabled", true);
+        -- This disables any button divs 
+
+
+
+HTML Change: .html() // .text() // .appendTo() // .clone()
+    1. Add HTML within an element 
+        >> $("h3").html("<em>jQuery Playground</em>");
+    2. Add text within an element; this will also be replacing any text that is already present within the div
+        >> $("h3").text("Here's your sign!");
+    3. Moving elements with '.appendTo()'
+        >> $("#target4").appendTo("#left-well");
+        -- This removes the element and pastes it within another
+    4. Copy / Paste is possible with '.clone()'
+        >> $("#target2").clone().appendTo("#right-well");
+        -- To use properly you'll have to first clone then 'appendTo'
+
+Parent and Children Change: .parent() // .children()
+    1. This allows for the selection of the parent of whatever element you choose
+        >> $("#left-well").parent().css("background-color", "blue")
+    2. The child selection will select everything within a certain div
+        >> $("#left-well").children().css("color", "blue")
+    
+Special child-selector: ".target:nth-child()" // ".target:odd"
+    1. This allows for the sepecific selection
+        >> $(".target:nth-child(3)").addClass("animated bounce");
+    2. Select the even or odd with special selector
+        >> $(".target:odd").addClass("animated shake");
+
+Target Body: $("body")
+    1. Update the body of your HTML 
+        >> $("body").addClass("animated fadeOut");
