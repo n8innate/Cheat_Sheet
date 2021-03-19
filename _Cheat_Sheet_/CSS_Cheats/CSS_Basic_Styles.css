@@ -1,0 +1,60 @@
+/* 
+
+>>> Centering <<<
+
+"height, width" 
+    -
+>> 
+
+" position "
+    -
+>> 
+
+" padding "
+    - Changes inside spacing from div borders
+>> div {padding: auto;}
+
+" margin "
+    -
+>> 
+
+" top, bottom, left, right "
+    -
+>> 
+
+" background-color "
+    - Fills in the css box with whatever color chosen
+>> div {background-color: grey;}
+
+
+" border-radius "
+    - Reshapes boxes towards a rounder shape; high enough values create a circle
+>> div {border-radius: 50%} << Makes a circle
+
+" box-shadow "
+    - Allows for a background shading or styling. There are four components: 1) offset-x, 2) offset-y, 3) blur-radius[in 'px'], 4) spread-radius[size] and a 5) color-value, in that order.
+>> div {box-shadow: 10px 10px 10px 0px grey;}
+
+" transform " 
+    - Allows for the stylization of an element in numerous ways: 
+        - rotate(45deg): rotates 
+        - matrix(1, 2, 3, 4, 5, 6): 
+        - translate(120px, 50%): 
+        - scale(0.5): 
+        - skew(30deg, 20deg): 
+>> 
+
+" content " 
+    - Allows for 
+>> div {content: ;}
+
+" ::after, ::before " 
+    - Considered psuedo-elements since they need defined content property to operate 
+    - 
+>> div {}  div::after {}  div::before {}
+
+"content" 
+    -
+>> 
+
+*/

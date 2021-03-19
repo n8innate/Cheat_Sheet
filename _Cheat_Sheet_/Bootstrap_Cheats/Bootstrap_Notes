@@ -1,0 +1,32 @@
+
+Adding Bootstrap:
+    - You can add bootstrap to any app by linking your html to: 
+        >> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+Sizing Images to fit screens appropriately:
+    - Add >> class="img-responsive" to <img></img>
+
+Centering text: 
+    - Add class >> class="text-center"
+
+Buttons: 
+    - To make a standard button with Bootstrap
+        >> <button class="btn btn-default">Like</button>
+    - Make button span the page
+        >> class="btn-block"
+    - Make buttons stand-out 
+        >> class="btn-primary"
+        >> class="btn-info"
+        >> class="btn-danger"
+
+Icons: 
+    - Add little icons to your buttons or elsewhere with the i div
+        >> <i class="fas fa-thumbs-up"></i>
+        >> <i class="fas fa-info-circle"></i>
+        >> <i class="fas fa-info"></i>
+        >> <i class="fas fa-trash"></i>
+
+Boxes: 
+    - Bootstrap works alongside the "grid" format, this means you can add classes to divs that will represent the size and positioning you want
+        >> class="col-xs-4"
+    - Fit multiple elements within a "row" div, giving each their own div of how much room they are to take up
